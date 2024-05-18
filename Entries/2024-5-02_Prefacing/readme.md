@@ -1,13 +1,13 @@
-# 2024-5-2-Prefacing
+# 2024-5-02-Prefacing
 ## The past
 ### Prefacing
 About eight months ago, I wanted to dive a little deeper into homelabbing than what I had going on at the time. My setup
 consisted of the standard ISP issued router, with all devices on the network connected wirelessly via DHCP. My main workstation
 was a Windows desktop that I had built about a year and a half prior, spec sheet and photos attached here.
 
-![ComputerSpecs](/Entries/2024-5-2_Prefacing/ComputerSpecs.png)
+![ComputerSpecs](/Entries/2024-5-02_Prefacing/ComputerSpecs.png)
 
-![ComputerBuild](/Entries/2024-5-2_Prefacing/ComputerBuild.png)
+![ComputerBuild](/Entries/2024-5-02_Prefacing/ComputerBuild.png)
 
 This was not much of a complicated setup. Networking settings were untouched from stock except maybe a couple of forwarded ports. My workstation hosted a VM for seeding, but often this VM was powered off due to how loud the computer was, and the lack of sleep I was getting due to some of the RGB components not easily being disabled, mainly on the motherboard.
 
@@ -119,6 +119,6 @@ bridge-fd 0
 iface wlo1 inet manual
 ```
 
-[Here is what that looks like on a 6 inch phone screen](Entries/2024-5-2_Prefacing/MobileTroubleshooting.png). What joy.
+[Here is what that looks like on a 6 inch phone screen](Entries/2024-5-02_Prefacing/MobileTroubleshooting.png). What joy.
 
 The future plan now is to back up the VMs, sell the current "server", and build out a new one.
