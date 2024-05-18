@@ -83,6 +83,6 @@ iface enp2s0f1 inet manual
 iface wlp89s0 inet manual
 ```
 
-I figured the best option was to just substitute different interfaces into the ``bridge-ports`` section. I didn't know which was which. I subsituted all of them, and on the last attempt, ``enp87s0`` was the correct one. I was now able to load into the web GUI and get out of the KVM.
+I figured the best option was to just substitute different interfaces into the ``bridge-ports`` section. I didn't know which was which. I subsituted all of them, and on the last attempt, ``enp88s0`` was the correct one. I was now able to load into the web GUI and get out of the KVM.
 
 With Proxmox now loaded up and working, I was able to mount the storage folder on my NAS and recover the VM that was stored in there. It was so easy. I booted up the VM and everything worked perfectly.
