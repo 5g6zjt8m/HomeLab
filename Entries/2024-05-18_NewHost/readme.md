@@ -1,4 +1,4 @@
-# 2024-5-18_NewHost
+# 2024-05-18_NewHost
 
 ## Prepping for sale
 
@@ -28,7 +28,7 @@ I encrypted using Bitlocker instead and this was a much better solution. I now h
 
 I was searching for a new system to host Proxmox. I wanted to be able to host a decent streaming server using something like Plex or Jellyfin. I stumbled upon the [Minisforum MS-01](https://store.minisforum.com/products/minisforum-ms-01) and bought it barebones. An i9-13900H is a beast of a processor. More importantly, I thought the I/O was pretty crazy.
 
-![MS01](/Entries/2024-5-18_NewHost/MS01.png)
+![MS01](/Entries/2024-05-18_NewHost/MS01.png)
 
 Dual 2.5G LAN ports and dual 10Gbps SFP+ ports is huge. It opens the door for so many projects in the future, maybe speeding up data transfer between the NAS and VM hosts.
 
@@ -44,7 +44,7 @@ I took apart the laptop and removed the 1TB SSD. Booted it back up and GRUB load
 
 I was met with this screen.
 
-![Bitlocker](/Entries/2024-5-18_NewHost/Bitlocker.png)
+![Bitlocker](/Entries/2024-05-18_NewHost/Bitlocker.png)
 
 Not a good sign. I didn't know that this was a function of Bitlocker. I figured it was like any other encryption where your password is the key and that's it. I assumed the "recovery key" was something that's used for when someone forgot their key, and it was just some huge long string that would decrypt the drive. Of course I didn't want that file laying around somewhere, so I never saved it.
 
