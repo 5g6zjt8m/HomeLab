@@ -25,3 +25,13 @@ I heard great things about the Pihole project, which involves setting up your ow
 To set up Pihole in Proxmox, I spun up a new VM using Ubuntu, allocated 1024MB of RAM, 8GB of storage, a single CPU core, and installed the OS. After reserving a DHCP address for the server, I installed curl and then Pihole, enabling the web GUI. However, running a full OS for this felt wasteful, especially since Ubuntu used 90% of the RAM.
 
 I tried DietPi to save RAM but encountered issues. Frustrated, I decided to try containers (LXC) in Proxmox, which are lighter than VMs. After some trial and error, I successfully created a container with an Ubuntu template, allocated 512MB of RAM, one core, and 8GB of storage. Installing Pihole in the container was straightforward, and I managed to save 512MB of RAM without unnecessary OS bloat.
+
+## [2024-07-20_Recovering](/Entries/2024-07-20_Recovering/)
+
+I had an issue with my seeding virtual machine, which had been working well until it suddenly stopped seeding. When the VM wouldn't boot, I saw an error indicating that GNOME Display Manager couldn't start.
+
+To troubleshoot, I booted from an Ubuntu live image and quickly realized the virtual disk was completely full, preventing the desktop environment from loading. I figured out that a power loss had caused the NAS to reboot and remain encrypted. Automated downloads from qBittorrent filled up the VM's local storage instead of the NAS because the NAS wasn’t mounted.
+
+To fix this, I took ownership of the directory using ``sudo chmod 777 -R /path/to/folder``, deleted the downloaded files, and rebooted the VM. It then booted correctly and resumed its normal operations.
+
+I need to find a way to detect if the NAS is mounted to prevent such issues in the future, possibly using permissions. For now, I’ve disabled automatic downloading since it nearly filled up the 8TB NAS too. I also plan to automate VM backups.
