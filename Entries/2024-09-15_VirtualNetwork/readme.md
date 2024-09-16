@@ -15,7 +15,7 @@ I wanted to build a fully fledged testing environment. I have been treating my "
 
 ### A ten minute rudimentary diagram to help visualize: 
 
-![Diagram](/Entries/2024-09-15_VirtualNetwork/rudimentary.png)
+![Diagram](/Entries/2024-09-15_VirtualNetwork/Diagram.png)
 
 <sup><sub>This is not nearly my best work. It is simply to help visualize what I'm talking about here.</sub></sup>
 
