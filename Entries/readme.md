@@ -35,3 +35,13 @@ To troubleshoot, I booted from an Ubuntu live image and quickly realized the vir
 To fix this, I took ownership of the directory using ``sudo chmod 777 -R /path/to/folder``, deleted the downloaded files, and rebooted the VM. It then booted correctly and resumed its normal operations.
 
 I need to find a way to detect if the NAS is mounted to prevent such issues in the future, possibly using permissions. For now, I’ve disabled automatic downloading since it nearly filled up the 8TB NAS too. I also plan to automate VM backups.
+
+## [2024-09-15_VirtualNetwork](/Entries/2024-09-15_VirtualNetwork/)
+
+I wanted to create a dedicated testing environment, as I've been using my home network for experiments, and every time I set a DHCP reservation on my RT-AX86U router, it disrupts the entire network for about 90 seconds. To avoid this, I decided to build a completely isolated virtual network in my Proxmox environment.
+
+- I created a virtual router using an OpenWrt VM.
+- Configured and connected virtual interfaces and switches.
+- Created a new VM to act as an end host.
+
+After much troubleshooting, I'm leaving off tonight by having an accessible web UI for the router.
