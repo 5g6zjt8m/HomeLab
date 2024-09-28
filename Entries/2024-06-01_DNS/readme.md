@@ -1,5 +1,12 @@
 # 2024-06-01_DNS
 
+### What I achieved:
+- I stood up a DNS server to block advertising domains.
+
+### I did this through:
+- Creating a VM in my Proxmox environment to host PiHole. I later created an LXC container for this to save resources.
+- Statically configuring DNS addresses for devices I wanted this to apply to.
+
 ## Home DNS server
 
 I had heard great things about the [Pihole project](https://pi-hole.net/). Essentially, you're just standing up your own DNS server and then Pihole will make those DNS requests. The Pihole DNS server uses a configurable internal list of domains used for advertisements. It checks your DNS requests, and if the domain name matches on the blocklist, it will serve back an empty page. Pihole does this by just having those name records be associated with invalid IP addresses. The DNS record would look something like this:

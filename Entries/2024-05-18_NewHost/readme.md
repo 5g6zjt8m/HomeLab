@@ -1,5 +1,16 @@
 # 2024-05-18_NewHost
 
+### What I achieved:
+- I took out an SSD, and sold my old gaming computer that was acting as my Proxmox server.
+- I configured a dual boot setup with encryption on my laptop, initially using the spare SSD. This was later consolidated to using only one drive.
+- I purchased and set up a new host to act as my Proxmox server, restoring my previously exported VM.
+
+### I did this through:
+- Having hardware experience in disassembling/reassembling all sorts of different device chassis. Swapping hardware like SSDs and RAM is not a challenge.
+- Cloning partitions to a new drive.
+- Repairing GRUB using a live environment, facilitating an Ubuntu/Windows dual boot. Used GParted and ``diskmgmt.msc`` to designate the OS partitions. I used Bitlocker for encryption on the Windows partition, and applied the recovery key when necessary.
+- Installing Proxmox remotely using my PiKVM, configuring ``/etc/network/interfaces``, and importing the old VM from my NAS.
+
 ## Prepping for sale
 
 A friend of mine offered to buy the old gaming computer from me. There was a little bit of preparation I needed to do to get it ready for a new owner. There is really only one VM I cared about, which was the one I used for 24/7 seeding. There was quite a bit of configuration setting up that VM. Stuff like making it only connect to external networks using a VPN, getting some folders mounted through configuring ``/etc/fstab`` (and breaking it multiple times), ufw rules, QBittorrent settings, having everything autolaunch properly. I'd rather not do it all over again if I didn't need to.

@@ -1,5 +1,13 @@
 # 2024-07-20_Recovering
 
+### What I achieved:
+- Diagnosed and resolved a Linux VM failing to boot.
+- Identified a flaw within automated processes causing the issue.
+
+### I did this through:
+- Understanding how to spot and research specific error codes.
+- Booting into a live environment, taking ownership of the bloated directory with ``sudo chmod 777 -R /(path to folder)``, and deleting the errant files.
+
 ## Wait, why is nothing seeding?
 
 My seeding VM had been pretty bulletproof for the past couple of months, and I've grown my upload total to almost six terabytes. Now that's a lot of Linux .isos. On rare occasions I'd notice that I had no active torrents on the tracker's site. Usually it was because of power loss (I don't have a UPS) and the NAS hadn't been manually decrypted yet. All I had to do in these occasions was decrypt it and reboot the VM.
