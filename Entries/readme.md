@@ -45,3 +45,11 @@ I wanted to create a dedicated testing environment, as I've been using my home n
 - Created a new VM to act as an end host.
 
 After much troubleshooting, I'm leaving off tonight by having an accessible web UI for the router.
+
+## [2024-09-28_OpenWRT](/Entries/2024-09-28_OpenWrt/)
+
+I connected my testing LAN (192.168.5.0/24) to my home LAN (10.2.50.0/24), allowing it to access the internet. To do this, I manually configured the br-lan bridge in OpenWrt from the command line to include only eth1, which let me access the web UI from host1. I also set the router interfaces with correct addresses, gateways, and broadcast addresses.
+
+When I couldn't access the web GUI after rebooting with both virtual switches (vmbr0 and vmbr1) attached, I realized br-lan had reset itself to 192.168.0.1. I fixed it by running uci commands to restore the correct IP, 192.168.5.1. I then discovered br-lan was assigned to eth0 instead of eth1 and adjusted it accordingly, which solved the access issue.
+
+Once I regained access to the web UI, I created a WAN interface using eth0 and set the correct address and gateway. I also reconfigured the LAN interface for eth1 and adjusted some firewall zone settings to ensure traffic could flow between 192.168.5.0/24 and 10.2.50.0/24. As a result, my testing LAN now has a proper route to the home LAN and internet connectivity.
