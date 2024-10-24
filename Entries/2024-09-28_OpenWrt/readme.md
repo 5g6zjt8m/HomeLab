@@ -61,4 +61,4 @@ Once configured, ``host1`` (192.168.5.12) could ping the ``WAN`` interface (10.2
 
 ![Zone](/Entries/2024-09-28_OpenWrt/Zone.png)
 
-**As a result, 192.168.5.0/24 has a route to 10.2.50.0/24 via 10.2.50.215 (eth1), and vice versa.**
+**As a result, 192.168.5.0/24 has a route to 10.2.50.0/24 via 10.2.50.215 (eth0), and vice versa.**
