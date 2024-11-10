@@ -53,3 +53,9 @@ I connected my testing LAN (192.168.5.0/24) to my home LAN (10.2.50.0/24), allow
 When I couldn't access the web GUI after rebooting with both virtual switches (vmbr0 and vmbr1) attached, I realized br-lan had reset itself to 192.168.0.1. I fixed it by running uci commands to restore the correct IP, 192.168.5.1. I then discovered br-lan was assigned to eth0 instead of eth1 and adjusted it accordingly, which solved the access issue.
 
 Once I regained access to the web UI, I created a WAN interface using eth0 and set the correct address and gateway. I also reconfigured the LAN interface for eth1 and adjusted some firewall zone settings to ensure traffic could flow between 192.168.5.0/24 and 10.2.50.0/24. As a result, my testing LAN now has a proper route to the home LAN and internet connectivity.
+
+## [2024-11-09_ReverseProxy](/Entries/2024-11-09_ReverseProxy/)
+
+I set up a secure, scalable reverse proxy for my home network to allow remote access to my GNS3 server without a VPN client, and I plan to expand it for other services. I created an NGINX container in Proxmox, set up a dynamic DNS with DuckDNS to keep my home IP updated, and configured SSL to secure incoming connections.
+
+Initially, I overlooked SSL, which highlighted the need for HTTPS after seeing credentials in plaintext in Wireshark. Now, the reverse proxy enforces HTTPS for security, and while my LAN traffic remains unencrypted, I'm comfortable with this setup for now. I encountered issues with logging in OpenResty and may need a new container or VM to enable centralized logging for monitoring access attempts.
